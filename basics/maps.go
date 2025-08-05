@@ -1,11 +1,11 @@
-package main
+package basics
 
 import (
 	"fmt"
 	"maps"
 )
 
-func main() {
+func mapss() {
 
 	myMap := make(map[string]int)
 
