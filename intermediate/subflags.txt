@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-func main() {
+func main(){
 	subcommand1 := flag.NewFlagSet("firstSub", flag.ExitOnError)
 	subcommand2 := flag.NewFlagSet("secondSub", flag.ExitOnError)
 

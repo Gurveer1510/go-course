@@ -1,0 +1,27 @@
+package main
+
+import (
+	"fmt"
+	"os"
+	"strings"
+)
+
+func main () {
+	user := os.Getenv("USER")
+	home := os.Getenv("HOME")
+
+	fmt.Println("User env var:", user)
+	fmt.Println("Home env var:", home)
+
+	err := os.Setenv("FRUIT", "PEACH")
+
+	if err != nil {
+		panic(err)
+	}
+
+	for _, element := range os.Environ() {
+		kvPair := strings.SplitN(element, "=", 2)	
+		fmt.Println(kvPair[0],":",kvPair[1])
+	}
+
+}
